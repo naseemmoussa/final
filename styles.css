@@ -1,10 +1,10 @@
-.foodbutton {
+/* .foodbutton {
     width:100px;
    height:100px;
    padding:10px;
    margin:5px 2.5px;
    display:inline-table;
-}
+} */
 .foodimage {
     border: 1px solid black;
     height:75px;
@@ -18,9 +18,23 @@ button {
     display:inline-table;
     
   font: inherit;
-  color: inherit;
-  background-color: transparent;
+  color: white;;
+  background-color: black;
 }
 .calorietotal {
     display: inline-table;
+}
+#checker {   
+    display:inline;
+    padding-left:20px;
+}
+body {
+    background-color: darkcyan;
+
+}
+p {
+    font-size: 13;
+}
+.smolbr {
+    margin:5px;
 }

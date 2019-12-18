@@ -10,8 +10,10 @@
     <script src ='food.js'> </script>
     <link rel="stylesheet" href="styles.css">
     <div id='foodbuttons'>
-    <button type = 'button' class='foodbutton'>Start Tracker <br> </button>
-    <h4 class='calorietotal'>Total Calories:  </h4><br>
+    <button type = 'button'  value = 'refresh page' onclick= "window.location.reload();"> Reset Tracker <br> </button>
+    <h4 id = 'calorie' class='calorietotal'>Total Calories: 0  </h4>
+    <h4 id = 'checker'> Under Daily Needed Average</h4> <br class='smolbr'>
+    <p>*Every food is measured in servings</p> <br class='smolbr'>
     <button type = 'button' id = 'brfast' class = 'starterbutton'> Breakfast <br> </button>
     <button type = 'button' id = 'fruits' class = 'starterbutton'> Fruits and Veggies <br> </button>
     <button type = 'button' id = 'sidesed' class = 'starterbutton'> Sides and Appetizers <br></button>
@@ -19,43 +21,45 @@
     <button type = 'button' id = 'drinks' class = 'starterbutton'> Drinks <br> </button>
     <button type = 'button' id = 'other' class = 'starterbutton'> Other <br> </button>
     <button type = 'button' id = 'all' class = ' starterbutton'> Display All </button>
+    <button type = 'button' id = 'nun' class = ' starterbutton'> Display None </button>
     <div> <br> </div>
-    <button class = 'fruits' type = 'button' class='foodbutton'> Apples <br> <img class='foodimage' src="https://images-na.ssl-images-amazon.com/images/I/918YNa3bAaL._SX425_.jpg" alt=""></button>
-    <button class = 'fruits' type = 'button' class='foodbutton'> Bananas <br> <img class='foodimage' src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Single.jpg" alt=""></button>
-    <button class = 'other'  type = 'button' class='foodbutton'> Ramen <br> <img class='foodimage' src="https://images-na.ssl-images-amazon.com/images/I/51PXoeVnMWL.jpg" alt=""></button>
-    <button class = 'Entree' type = 'button' class='foodbutton'> Spaghetti<br> <img class='foodimage' src="https://www.365daysofcrockpot.com/wp-content/uploads/2018/04/instant-pot-spaghetti-sauce.jpg" alt=""> </button>
-    <button class = 'Entree' type = 'button' class='foodbutton'> Mac and Cheese <br> <img class='foodimage' src="https://storage.googleapis.com/gen-atmedia/3/2015/09/e73344b9cdfdedc315f380c25d0c9e89cdad696f.jpeg" alt=""></button>
-    <button class = 'Entree' type = 'button' class='foodbutton'> Chicken Sandwich <br> <img class='foodimage' src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/6/8/0/FNM_070110-Copy-That-002_s4x3.jpg.rend.hgtvcom.826.620.suffix/1382539317193.jpeg" alt=""></button>
-    <button class = 'Entree' type = 'button' class='foodbutton'> Steak <br> <img class='foodimage'  src="https://www.jessicagavin.com/wp-content/uploads/2018/06/how-to-reverse-sear-a-steak-11.jpg" alt=""></button>
-    <button class = 'Entree' type = 'button' class='foodbutton'> Fried Chicken <br> <img class='foodimage'  src="https://s23991.pcdn.co/wp-content/uploads/2013/10/batter-fried-chicken-recipe-fp.jpg" alt=""></button>
-    <button class = 'other'  type = 'button' class='foodbutton'> Caesar Salad <br> <img class='foodimage' src="https://natashaskitchen.com/wp-content/uploads/2019/01/Caesar-Salad-Recipe-3.jpg" alt=""></button>
-    <button class = 'other'  type = 'button' class='foodbutton'> Cheese <br> <img class='foodimage'  src="https://cms.splendidtable.org/sites/default/files/styles/w2000/public/470340853.jpg?itok=Vu-VD1UP" alt=""></button>
-    <button class = 'Entree' type = 'button' class='foodbutton'> Pizza <br><img class='foodimage'  src="https://www.hungryhowies.com/sites/default/files/styles/menu_item_280x175/public/images/menu-items/thumbnails/build-you-own_0.png?itok=kqLw4gRp" alt=""></button>
-    <button class = 'drinks' type = 'button' class='foodbutton'> Soda <br><img class='foodimage'  src="https://officedepot.scene7.com/is/image/officedepot/208206_p?id=VuASF1&fmt=jpg&fit=constrain,1&wid=318&hei=500&op_sharpen=1&qlt=95" alt=""></button>
-    <button class = 'side'   type = 'button' class='foodbutton'> Rice <br><img class='foodimage'  src="https://static01.nyt.com/images/2018/02/21/dining/00RICEGUIDE8/00RICEGUIDE8-articleLarge.jpg" alt=""></button>
-    <button class = 'side'   type = 'button' class='foodbutton'> French Fries <br><img class='foodimage'  src="https://cms.splendidtable.org/sites/default/files/styles/w2000/public/french-fries.jpg?itok=FS-YwUYH" alt=""></button>
-    <button class = 'Entree' type = 'button' class='foodbutton'> Burrito <br><img class='foodimage'  src="https://lovingitvegan.com/wp-content/uploads/2018/11/Vegan-Burrito-11.jpg" alt=""></button>
-    <button class = 'Entree' type = 'button' class='foodbutton'> Taco <br><img class='foodimage'  src="http://seattlemag.com/sites/default/files/field/image/tacos%20stock.jpg" alt=""></button>
-    <button class = 'side'   type = 'button' class='foodbutton'> Chips <br><img class='foodimage'  src="https://upload.wikimedia.org/wikipedia/commons/6/69/Potato-Chips.jpg" alt=""></button>
-    <button class = 'Entree' type = 'button' class='foodbutton'> Sushi <br><img class='foodimage'  src="https://www.thespruceeats.com/thmb/IyxiJdbwFaixy4iolNYTLjBmW_w=/4288x2848/filters:fill(auto,1)/kimbap-korean-sushi-rolls-2118795-Hero-5b7dbdd346e0fb00250718b8.jpg" alt=""></button>
-    <button class = 'Entree' type = 'button' class='foodbutton'> Hamburger <br><img class='foodimage' src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/20190725-delish-air-fryer-burger-ehg-horizontal-1-1565299631.png?crop=0.502xw:1.00xh;0.187xw,0&resize=480:*" alt=""></button>
-    <button class = 'side'   type = 'button' class='foodbutton'> Shrimp <br><img class='foodimage'  src="https://static.wixstatic.com/media/0ff79f_a8d231df61e445a794cf29110d58d159.jpg/v1/fill/w_532,h_532,al_c,lg_1,q_85/0ff79f_a8d231df61e445a794cf29110d58d159.jpg" alt=""></button>
-    <button class = 'side'   type = 'button' class='foodbutton'> Chicken Wings <br><img class='foodimage' src="https://www.dinneratthezoo.com/wp-content/uploads/2016/08/baked-buffalo-wings-11.jpg" alt=""></button>
-    <button class = 'Entree' type = 'button' class='foodbutton'> Chicken Nuggets <br><img class='foodimage' src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/9/12/1/FN_Picky-Eaters-Chicken-Nuggets_s4x3.jpg.rend.hgtvcom.826.620.suffix/1383770571120.jpeg" alt=""></button>
-    <button class = 'side'   type = 'button' class='foodbutton'> Baguette <br><img class='foodimage' src="https://www.saveur.com/resizer/qbcPYYvDZm4X8qUqRLK87HSCoHM=/1200x628/smart/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/PUED4QMKFMJ62TD6XHSVVTRXL4.jpg" alt=""></button>
-    <button class = 'side'   type = 'button' class='foodbutton'> Pita Bread <br><img class='foodimage' src="https://www.myjewishlearning.com/wp-content/uploads/2005/12/pitot.jpg" alt=""></button>
-    <button class = 'other'  type = 'button' class='foodbutton'> Ice Cream <br><img class='foodimage' src="https://www.seriouseats.com/2018/06/20180625-no-churn-vanilla-ice-cream-vicky-wasik-13-1500x1125.jpg" alt=""></button>
-    <button class = 'Entree' type = 'button' class='foodbutton'> Hot Dog <br> <img class='foodimage' src="https://s23991.pcdn.co/wp-content/uploads/2018/05/best-hot-dog-fp.jpg" alt=""></button>
-    <button class = 'fruits' type = 'button' class='foodbutton'> Corn <br><img class='foodimage' src="https://www.jessicagavin.com/wp-content/uploads/2019/05/how-to-cook-corn-on-the-cob-8-1200.jpg" alt=""></button>
-    <button class = 'other'  type = 'button' class='foodbutton'> Chicken Noodle Soup <br><img class='foodimage' src="https://www.tasteofhome.com/wp-content/uploads/2018/04/exps192832_TH163619D09_30_2b.jpg" alt=""></button>
-    <button class = 'breakfast' type = 'button' class='foodbutton'> Bacon <br><img class='foodimage' src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-bacon-horizontal-1542140714.png?crop=1xw:0.7496251874062968xh;center,top&resize=1200:*" alt=""></button>
-    <button class = 'breakfast' type = 'button' class='foodbutton'> Cereal <br><img class='foodimage' src="https://cdnimg.webstaurantstore.com/images/products/large/430151/1682944.jpg" alt=""></button>
-    <button class = 'Entree' type = 'button' class='foodbutton'> Cheesesteak <br><img class='foodimage' src="https://upload.wikimedia.org/wikipedia/commons/0/09/Cheesesteak_heaven.jpg" alt=""></button>
-    <button class = 'breakfast' type = 'button' class='foodbutton'> Pancakes <br><img class='foodimage' src="https://images-gmi-pmc.edge-generalmills.com/edfaaf9f-9bde-426a-8d67-3284e9e496ae.jpg" alt=""></button>
-    <button class = 'breakfast' type = 'button' class='foodbutton'> Eggs <br><img class='foodimage' src="https://thecookful.com/wp-content/uploads/2019/04/Hard-Scrambled-Eggs-1392x780.jpg" alt=""></button>
-    <button class = 'breakfast' type = 'button' class='foodbutton'> Sausage <br><img class='foodimage' src="https://www.southsidemarket.com/wp-content/uploads/2017/06/HeroFinal-1.jpg" alt=""></button>
-    <button class = 'breakfast' type = 'button' class='foodbutton'> Grilled Cheese <br><img class='foodimage' src="https://assets.bonappetit.com/photos/57acf62a53e63daf11a4dbee/master/pass/best-ever-grilled-cheese.jpg" alt=""></button>
-    <button class = 'breakfast' type = 'button' class='foodbutton'> Waffles <br><img class='foodimage' src="https://bakingamoment.com/wp-content/uploads/2018/07/IMG_9117-fluffy-buttermilk-waffles-from-scratch-horizontal.jpg" alt=""></button>
+    <button class = 'fruits foodbutton' type = 'button'  value = '95'> Apples <br> <img class='foodimage' src="https://images-na.ssl-images-amazon.com/images/I/918YNa3bAaL._SX425_.jpg" alt=""></button>
+    <button class = 'fruits foodbutton' type = 'button'  value = '105'> Bananas <br> <img class='foodimage' src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Single.jpg" alt=""></button>
+    <button class = 'other foodbutton'  type = 'button'  value = '188'> Ramen <br> <img class='foodimage' src="https://images-na.ssl-images-amazon.com/images/I/51PXoeVnMWL.jpg" alt=""></button>
+    <button class = 'Entree foodbutton' type = 'button'  value = '221'> Spaghetti<br> <img class='foodimage' src="https://www.365daysofcrockpot.com/wp-content/uploads/2018/04/instant-pot-spaghetti-sauce.jpg" alt=""> </button>
+    <button class = 'Entree foodbutton' type = 'button'  value = '310'> Mac and Cheese <br> <img class='foodimage' src="https://storage.googleapis.com/gen-atmedia/3/2015/09/e73344b9cdfdedc315f380c25d0c9e89cdad696f.jpeg" alt=""></button>
+    <button class = 'Entree foodbutton' type = 'button'  value = '515'> Chicken Sandwich <br> <img class='foodimage' src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/6/8/0/FNM_070110-Copy-That-002_s4x3.jpg.rend.hgtvcom.826.620.suffix/1382539317193.jpeg" alt=""></button>
+    <button class = 'Entree foodbutton' type = 'button'  value = '679'> Steak <br> <img class='foodimage'  src="https://www.jessicagavin.com/wp-content/uploads/2018/06/how-to-reverse-sear-a-steak-11.jpg" alt=""></button>
+    <button class = 'Entree foodbutton' type = 'button'  value = '320'> Fried Chicken <br> <img class='foodimage'  src="https://s23991.pcdn.co/wp-content/uploads/2013/10/batter-fried-chicken-recipe-fp.jpg" alt=""></button>
+    <button class = 'other foodbutton'  type = 'button'  value = '94'> Caesar Salad <br> <img class='foodimage' src="https://natashaskitchen.com/wp-content/uploads/2019/01/Caesar-Salad-Recipe-3.jpg" alt=""></button>
+    <button class = 'other foodbutton'  type = 'button'  value = '113'> Cheese <br> <img class='foodimage'  src="https://cms.splendidtable.org/sites/default/files/styles/w2000/public/470340853.jpg?itok=Vu-VD1UP" alt=""></button>
+    <button class = 'Entree foodbutton' type = 'button'  value = '285'> Pizza <br><img class='foodimage'  src="https://www.hungryhowies.com/sites/default/files/styles/menu_item_280x175/public/images/menu-items/thumbnails/build-you-own_0.png?itok=kqLw4gRp" alt=""></button>
+    <button class = 'drinks foodbutton' type = 'button'  value = '150'> Soda <br><img class='foodimage'  src="https://officedepot.scene7.com/is/image/officedepot/208206_p?id=VuASF1&fmt=jpg&fit=constrain,1&wid=318&hei=500&op_sharpen=1&qlt=95" alt=""></button>
+    <button class = 'side foodbutton'   type = 'button'  value = '206'> Rice <br><img class='foodimage'  src="https://static01.nyt.com/images/2018/02/21/dining/00RICEGUIDE8/00RICEGUIDE8-articleLarge.jpg" alt=""></button>
+    <button class = 'side foodbutton'   type = 'button'  value = '365'> French Fries <br><img class='foodimage'  src="https://cms.splendidtable.org/sites/default/files/styles/w2000/public/french-fries.jpg?itok=FS-YwUYH" alt=""></button>
+    <button class = 'Entree foodbutton' type = 'button'  value = '447'> Burrito <br><img class='foodimage'  src="https://lovingitvegan.com/wp-content/uploads/2018/11/Vegan-Burrito-11.jpg" alt=""></button>
+    <button class = 'Entree foodbutton' type = 'button'  value = '156'> Taco <br><img class='foodimage'  src="http://seattlemag.com/sites/default/files/field/image/tacos%20stock.jpg" alt=""></button>
+    <button class = 'side foodbutton'   type = 'button'  value = '152'> Chips <br><img class='foodimage'  src="https://upload.wikimedia.org/wikipedia/commons/6/69/Potato-Chips.jpg" alt=""></button>
+    <button class = 'Entree foodbutton' type = 'button'  value = '220'> Sushi <br><img class='foodimage'  src="https://www.thespruceeats.com/thmb/IyxiJdbwFaixy4iolNYTLjBmW_w=/4288x2848/filters:fill(auto,1)/kimbap-korean-sushi-rolls-2118795-Hero-5b7dbdd346e0fb00250718b8.jpg" alt=""></button>
+    <button class = 'Entree foodbutton' type = 'button'  value = '303'> Hamburger <br><img class='foodimage' src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/20190725-delish-air-fryer-burger-ehg-horizontal-1-1565299631.png?crop=0.502xw:1.00xh;0.187xw,0&resize=480:*" alt=""></button>
+    <button class = 'side foodbutton'   type = 'button'  value = '99'> Shrimp <br><img class='foodimage'  src="https://static.wixstatic.com/media/0ff79f_a8d231df61e445a794cf29110d58d159.jpg/v1/fill/w_532,h_532,al_c,lg_1,q_85/0ff79f_a8d231df61e445a794cf29110d58d159.jpg" alt=""></button>
+    <button class = 'side foodbutton'   type = 'button'  value = '450'> Chicken Wings <br><img class='foodimage' src="https://www.dinneratthezoo.com/wp-content/uploads/2016/08/baked-buffalo-wings-11.jpg" alt=""></button>
+    <button class = 'Entree foodbutton' type = 'button'  value = '59'> Chicken Nuggets <br><img class='foodimage' src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/9/12/1/FN_Picky-Eaters-Chicken-Nuggets_s4x3.jpg.rend.hgtvcom.826.620.suffix/1383770571120.jpeg" alt=""></button>
+    <button class = 'side foodbutton'   type = 'button'  value = '400'> Baguette <br><img class='foodimage' src="https://www.saveur.com/resizer/qbcPYYvDZm4X8qUqRLK87HSCoHM=/1200x628/smart/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/PUED4QMKFMJ62TD6XHSVVTRXL4.jpg" alt=""></button>
+    <button class = 'side foodbutton'   type = 'button'  value = '165'> Pita Bread <br><img class='foodimage' src="https://www.myjewishlearning.com/wp-content/uploads/2005/12/pitot.jpg" alt=""></button>
+    <button class = 'other foodbutton'  type = 'button'  value = '137'> Ice Cream <br><img class='foodimage' src="https://www.seriouseats.com/2018/06/20180625-no-churn-vanilla-ice-cream-vicky-wasik-13-1500x1125.jpg" alt=""></button>
+    <button class = 'Entree foodbutton' type = 'button'  value = '152'> Hot Dog <br> <img class='foodimage' src="https://s23991.pcdn.co/wp-content/uploads/2018/05/best-hot-dog-fp.jpg" alt=""></button>
+    <button class = 'fruits foodbutton' type = 'button'  value = '125'> Corn <br><img class='foodimage' src="https://www.jessicagavin.com/wp-content/uploads/2019/05/how-to-cook-corn-on-the-cob-8-1200.jpg" alt=""></button>
+    <button class = 'other foodbutton'  type = 'button'  value = '87'> Chicken Noodle Soup <br><img class='foodimage' src="https://www.tasteofhome.com/wp-content/uploads/2018/04/exps192832_TH163619D09_30_2b.jpg" alt=""></button>
+    <button class = 'breakfast foodbutton' type = 'button'  value = '43'> Bacon <br><img class='foodimage' src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-bacon-horizontal-1542140714.png?crop=1xw:0.7496251874062968xh;center,top&resize=1200:*" alt=""></button>
+    <button class = 'breakfast foodbutton' type = 'button'  value = '307'> Cereal <br><img class='foodimage' src="https://cdnimg.webstaurantstore.com/images/products/large/430151/1682944.jpg" alt=""></button>
+    <button class = 'Entree foodbutton' type = 'button'  value = '438'> Cheesesteak <br><img class='foodimage' src="https://upload.wikimedia.org/wikipedia/commons/0/09/Cheesesteak_heaven.jpg" alt=""></button>
+    <button class = 'breakfast foodbutton' type = 'button'  value = '64'> Pancakes <br><img class='foodimage' src="https://images-gmi-pmc.edge-generalmills.com/edfaaf9f-9bde-426a-8d67-3284e9e496ae.jpg" alt=""></button>
+    <button class = 'breakfast foodbutton' type = 'button'  value = '78'> Eggs <br><img class='foodimage' src="https://thecookful.com/wp-content/uploads/2019/04/Hard-Scrambled-Eggs-1392x780.jpg" alt=""></button>
+    <button class = 'breakfast foodbutton' type = 'button'  value = '229'> Sausage <br><img class='foodimage' src="https://www.southsidemarket.com/wp-content/uploads/2017/06/HeroFinal-1.jpg" alt=""></button>
+    <button class = 'breakfast foodbutton' type = 'button'  value = '71'> Grilled Cheese <br><img class='foodimage' src="https://assets.bonappetit.com/photos/57acf62a53e63daf11a4dbee/master/pass/best-ever-grilled-cheese.jpg" alt=""></button>
+    <button class = 'drinks foodbutton' type = 'button' value = '62'> Mocha <br> <img class = 'foodimage'src="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2018/03/mocha-001.jpg?itok=pX2cX4i_" alt=""></button>
+    <button class = 'breakfast foodbutton' type = 'button'  value = '82'> Waffles <br><img class='foodimage' src="https://bakingamoment.com/wp-content/uploads/2018/07/IMG_9117-fluffy-buttermilk-waffles-from-scratch-horizontal.jpg" alt=""></button>
 </div>
 </body>
 </html>
