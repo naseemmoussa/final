@@ -35,7 +35,7 @@ function ready () {
         for (let food of foods) {  // separates the list of foods into individual foods
             food.onclick = function() {
                 console.log(this.value)
-                totalcalories += parseInt(this.value);
+                totalcalories += parseInt(this.value); //
                 console.log(totalcalories)
                 calorie.innerHTML = `Total Calories: ${totalcalories}` // used the backticks to use javascript string format, lets me display the calories with ease and with any changes
                 if (totalcalories >= 2700) {
@@ -106,4 +106,4 @@ function totalcalories() {
     
 }
                                       
-document.addEventListener('DOMContentLoaded', ready);
+document.addEventListener('DOMContentLoaded', ready); //I did not come up with this on my own, it was recommended by my teacher
