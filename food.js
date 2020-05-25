@@ -38,13 +38,7 @@ function ready () {
                 totalcalories += parseInt(this.value); //
                 console.log(totalcalories)
                 calorie.innerHTML = `Total Calories: ${totalcalories}` // used the backticks to use javascript string format, lets me display the calories with ease and with any changes
-                if (totalcalories >= 2700) {
-                    checker.innerHTML = 'Over Normal Calorie average';
-                    document.body.style.backgroundColor = 'crimson';
-                }else if (totalcalories <= 2700 && totalcalories >= 1800) {
-                    checker.innerHTML = 'Normal Calorie Intake Reached';
-                    document.body.style.backgroundColor = 'darkviolet';
-                }
+              dailycaloriechecker() ;
             }
 
             }
@@ -104,6 +98,15 @@ function otherdisplay(n) {
 }
 function totalcalories() {
     
+}
+function dailycaloriechecker() {
+     if (totalcalories >= 2700) {
+                    checker.innerHTML = 'Over Normal Calorie average';
+                    document.body.style.backgroundColor = 'crimson';
+                }else if (totalcalories <= 2700 && totalcalories >= 1800) {
+                    checker.innerHTML = 'Normal Calorie Intake Reached';
+                    document.body.style.backgroundColor = 'darkviolet';
+                }
 }
                                       
 document.addEventListener('DOMContentLoaded', ready); //I did not come up with this on my own, it was recommended by my teacher
