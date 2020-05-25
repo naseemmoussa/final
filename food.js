@@ -50,7 +50,7 @@ function ready () {
 
             }
         }
-    }
+    
 
 function everytingdisplay(n) {
     breakfastdisplay(n) ;
