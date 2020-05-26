@@ -38,7 +38,7 @@ function ready () {
                 totalcalories += parseInt(this.value); //
                 console.log(totalcalories)
                 calorie.innerHTML = `Total Calories: ${totalcalories}` // used the backticks to use javascript string format, lets me display the calories with ease and with any changes
-               
+               dailycalorietracker();
             }
 
             }
